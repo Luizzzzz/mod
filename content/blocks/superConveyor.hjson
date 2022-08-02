@@ -1,0 +1,10 @@
+name: "[#999900]super conveyor [#ff0000][Cheat]"
+type: Conveyor
+health: 200
+speed: 0.01f
+displayedSpeed: 20f
+requirements: [
+  copper/2
+]
+category: distribution
+alwaysUnlocked:true

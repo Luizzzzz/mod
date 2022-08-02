@@ -1,0 +1,14 @@
+name: "[#999900]super drill [#ff0000][Cheat]"
+type: Drill
+size: 2
+health: 2600
+drillTime: 1
+tier: 10
+drawRim: true
+rotateSpeed: 5
+floating: true
+category: production
+requirements: [
+  copper/10
+]
+alwaysUnlocked:true
