@@ -9,7 +9,7 @@
   "inaccuracy": 5,
   "speed": 5,
   "shots": 2,
-  "size": 2,
+  "size": 1,
   "targetAir": true,
   "targetGround": true,
   "rotatespeed": 2,
