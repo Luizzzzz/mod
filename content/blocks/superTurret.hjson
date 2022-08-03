@@ -9,7 +9,6 @@
   "inaccuracy": 5,
   "speed": 5,
   "shots": 2,
-  "velocityInaccuracy": 0.05,
   "size": 2,
   "targetAir": true,
   "targetGround": true,
@@ -19,7 +18,7 @@
   "buildCostMultiplier": 0,
   "ammoTypes": {
     "sand": {
-      "damage": 100, 
+      "damage": 200, 
       "speed": 6,
       "ammoMultiplier": 8,
       "impact": true,
@@ -28,29 +27,23 @@
       "lifetime": 200
     },
     "copper": {
-      "damage": 100, 
+      "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8,
-      "impact": true,
-      "knockback": 1,
+      "ammoMultiplier": 8, 
       "scaleLife": true,
       "lifetime": 200
     },
     "lead": {
-      "damage": 100, 
+      "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8,
-      "impact": true,
-      "knockback": 1,
+      "ammoMultiplier": 8, 
       "scaleLife": true,
       "lifetime": 200
     },
     "titanium": {
-      "damage": 100, 
+      "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8,
-      "impact": true,
-      "knockback": 1,
+      "ammoMultiplier": 8, 
       "scaleLife": true,
       "lifetime": 200
     }
