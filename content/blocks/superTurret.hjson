@@ -20,19 +20,12 @@
   "ammoTypes": {
     "sand": {
       "damage": 50,
-      "fragBullet": "BombBulletType",
-      "fragBullets": 5,
       "speed": 5,
-      "type": "BombBulletType",
-      "ammoMultiplier": 10,
       "lifetime": 200
     },
     "copper": {
-      "damage": 100,
-      "fragBullets": 5,
+      "damage": 100, 
       "speed": 5,
-      "type": "BombBulletType",
-      "fragBullet": "BombBulletType",
       "ammoMultiplier": 8,
       "impact": true,
       "knockback": 0.1,
@@ -40,9 +33,7 @@
       "lifetime": 200
     },
     "lead": {
-      "damage": 150,
-      "fragBullets": 5,
-      "fragBullet": "BombBulletType",
+      "damage": 150, 
       "speed": 5,
       "type": "BombBulletType",
       "ammoMultiplier": 8,
@@ -53,8 +44,7 @@
     },
     "titanium": {
       "damage": 200,
-      "speed": 4,
-      "fragBullets": 5,
+      "speed": 4, 
       "type": "BombBulletType",
       "ammoMultiplier": 8,
       "impact": true,
