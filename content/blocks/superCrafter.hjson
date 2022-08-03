@@ -1,0 +1,50 @@
+{
+  "name": "[#999900]super crafter [#ff0000]",
+  "type": "GenericCrafter",
+  "outputItems": [
+    {
+      "item": "Copper",
+      "amount": 20
+    },
+    {
+      "item": "Lead",
+      "amount": 15
+    },
+    {
+      "item": "Plastanium",
+      "amount": 1
+    },
+    {
+      "item": "Graphite",
+      "amount": 10
+    },
+    {
+      "item": "Silicon",
+      "amount": 5
+    }
+  ],
+  "outputLiquid": [
+    {
+      "liquid": "Water",
+      "amount": 1
+    }
+  ],
+  "power": 0,
+  "craftTime": 20,
+  "warmupSpeed": 0,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      "DrawDefult",
+      "DrawFlame"
+    ]
+  },
+  "requirements": [
+    {
+      "item": "Copper",
+      "amount": 20
+    }
+  ],
+  "alwaysUnlocked": true
+  "category": "production",
+}

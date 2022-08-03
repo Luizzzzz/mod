@@ -1,0 +1,40 @@
+{
+  "type": "ItemTurret",
+  "name": "[#999900]super turret [#ff0000]",
+  "description": "A shotgun turret. More damage the closer the enemies are to it's barrel.",
+  "health": 2800,
+  "maxAmmo": 50,
+  "reloadTime": 60,
+  "range": 200,
+  "shots": 25,
+  "inaccuracy": 20,
+  "velocityInaccuracy": 0.05,
+  "size": 2,
+  "targetAir": true,
+  "targetGround": true,
+  "rotatespeed": 2,
+  "recoilAmount": 1,
+  "shootSound": "shoot",
+  "buildCostMultiplier": 0,
+  "ammoTypes": {
+    "copper": {
+      "damage": 162,
+      "speed": 3,
+      "type": "BasicBulletType",
+      "lifetime": 30,
+      "width": 4,
+      "height": 7,
+      "frontColor": "ff0000",
+      "backColor": "ff0000",
+      "shrinkY": 0.1
+    },
+  },
+  "requirements": [
+    {
+      "item": "copper",
+      "amount": 100
+    },
+  ],
+  "category": "turret", 
+  "alwaysUnlocked": true 
+}
