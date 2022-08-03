@@ -3,29 +3,29 @@
   "type": "GenericCrafter",
   "outputItems": [
     {
-      "item": "Copper",
+      "item": "copper",
       "amount": 20
     },
     {
-      "item": "Lead",
+      "item": "lead",
       "amount": 15
     },
     {
-      "item": "Plastanium",
+      "item": "plastanium",
       "amount": 1
     },
     {
-      "item": "Graphite",
+      "item": "graphite",
       "amount": 10
     },
     {
-      "item": "Silicon",
+      "item": "silicon",
       "amount": 5
     }
   ],
   "outputLiquid": [
     {
-      "liquid": "Water",
+      "liquid": "water",
       "amount": 1
     }
   ],
@@ -41,10 +41,10 @@
   },
   "requirements": [
     {
-      "item": "Copper",
+      "item": "copper",
       "amount": 20
     }
   ],
-  "alwaysUnlocked": true
-  "category": "production",
+  "alwaysUnlocked": true,
+  "category": "production"
 }
