@@ -1,7 +1,9 @@
-name: "cheatBrige"
-displayName: "cheatBrigeMod"
-author: Luiz
-description: "高速移动"
-version: "1.0"
-minGameVersion: "136"
-dependencies: [ ]
+{
+	"name": "cheatBrige",
+	"displayName": "cheatBrigeMod",
+	"author": "Luiz",
+	"description": "高速移动",
+	"version": "1.0",
+	"minGameVersion": "136",
+	"dependencies": []
+}
