@@ -23,7 +23,7 @@
       "amount": 5
     }
   ],
-  "outputLiquid": [
+  "outputLiquids": [
     {
       "liquid": "water",
       "amount": 1
