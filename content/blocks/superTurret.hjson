@@ -6,8 +6,9 @@
   "maxAmmo": 50,
   "reloadTime": 60,
   "range": 200,
-  "shots": 25,
   "inaccuracy": 20,
+  "speed": 5,
+  "shots": 2,
   "velocityInaccuracy": 0.05,
   "size": 2,
   "targetAir": true,
@@ -19,27 +20,47 @@
   "ammoTypes": {
     "sand": {
       "damage": 50,
-      "speed": 7,
+      "fragBullet": "BombBulletType",
+      "fragBullets": 5,
+      "speed": 5,
       "type": "BombBulletType",
-      "lifetime": 50
+      "ammoMultiplier": 10,
+      "lifetime": 200
     },
     "copper": {
       "damage": 100,
-      "speed": 6,
+      "fragBullets": 5,
+      "speed": 5,
       "type": "BombBulletType",
-      "lifetime": 60
+      "fragBullet": "BombBulletType",
+      "ammoMultiplier": 8,
+      "impact": true,
+      "knockback": 0.1,
+      "scaleLife": true,
+      "lifetime": 200
     },
     "lead": {
       "damage": 150,
+      "fragBullets": 5,
+      "fragBullet": "BombBulletType",
       "speed": 5,
       "type": "BombBulletType",
-      "lifetime": 70
+      "ammoMultiplier": 8,
+      "impact": true,
+      "knockback": 0.1,
+      "scaleLife": true,
+      "lifetime": 200
     },
     "titanium": {
       "damage": 200,
       "speed": 4,
+      "fragBullets": 5,
       "type": "BombBulletType",
-      "lifetime": 80
+      "ammoMultiplier": 8,
+      "impact": true,
+      "knockback": 0.1,
+      "scaleLife": true,
+      "lifetime": 200
     }
   },
   "requirements": [
