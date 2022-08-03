@@ -5,26 +5,32 @@
   "hasItems": true,
   "craftEffect": "smeltsmoke",
   "updateEffect": "pulverizeRed",
-  "outputItems": [
+  "requirements": [
     {
       "item": "copper",
-      "amount": 20
+      "amount": 10
+    }
+  ],
+  "outputItems": [
+    {
+      "item": "tungsten",
+      "amount": 1
     },
     {
       "item": "lead",
-      "amount": 15
+      "amount": 1
     },
     {
-      "item": "plastanium",
+      "item": "titanium",
       "amount": 1
     },
     {
       "item": "graphite",
-      "amount": 10
+      "amount": 1
     },
     {
       "item": "silicon",
-      "amount": 5
+      "amount": 1
     }
   ],
   "outputLiquids": [
@@ -44,12 +50,6 @@
       ]
     }
   },
-  "requirements": [
-    {
-      "item": "copper",
-      "amount": 20
-    }
-  ],
   "alwaysUnlocked": true,
   "category": "crafting"
 }
