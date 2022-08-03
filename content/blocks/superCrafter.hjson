@@ -32,20 +32,14 @@
       "item": "silicon",
       "amount": 1
     }
-  ],
-  "outputLiquids": [
-    {
-      "liquid": "water",
-      "amount": 1
-    }
-  ],
+  ], 
   "craftTime": 20,
   "consumes": {
     "items": {
       "items": [
         {
           "item": "copper",
-          "amount": 3
+          "amount": 5
         }
       ]
     }
