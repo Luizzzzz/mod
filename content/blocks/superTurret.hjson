@@ -6,7 +6,7 @@
   "maxAmmo": 50,
   "reloadTime": 60,
   "range": 200,
-  "inaccuracy": 20,
+  "inaccuracy": 5,
   "speed": 5,
   "shots": 2,
   "velocityInaccuracy": 0.05,
