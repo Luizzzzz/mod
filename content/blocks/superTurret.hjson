@@ -5,7 +5,7 @@
   "health": 2800,
   "maxAmmo": 50,
   "reloadTime": 60,
-  "range": 200,
+  "range": 250,
   "inaccuracy": 5,
   "speed": 5,
   "shots": 2,
@@ -24,28 +24,28 @@
       "impact": true,
       "knockback": 1,
       "scaleLife": true,
-      "lifetime": 200
+      "lifetime": 250
     },
     "copper": {
       "damage": 200, 
       "speed": 6,
       "ammoMultiplier": 8, 
       "scaleLife": true,
-      "lifetime": 200
+      "lifetime": 250
     },
     "lead": {
       "damage": 200, 
       "speed": 6,
       "ammoMultiplier": 8, 
       "scaleLife": true,
-      "lifetime": 200
+      "lifetime": 250
     },
     "titanium": {
       "damage": 200, 
       "speed": 6,
       "ammoMultiplier": 8, 
       "scaleLife": true,
-      "lifetime": 200
+      "lifetime": 250
     }
   },
   "requirements": [

@@ -1,9 +1,7 @@
 {
-  "type": "NuclearReactor",
-  "name": "[#999900]Nuclear Reactor[#ff0000]",
-  "description": "A reactor that uses uraniumrods to create a lot of power. Explodes violently when not cooled all the time!",
-  "size": 4,
-  "hasPower": true,
+  "type": "ConsumeGenerator",
+  "name": "[#999900]super reactor[#ff0000]", 
+  "size": 2, 
   "hasItems": true,
   "itemCapacity": 20,
   "itemDuration": 10,
