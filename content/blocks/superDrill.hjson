@@ -3,7 +3,7 @@
   "type": "Drill",
   "size": 2, // 大小
   "health": 2600, // 
-  "drillTime": 50,
+  "drillTime": 30,
   "tier": 6, // 层数
   "itemCapacity": 100, // 物品容量
   "drawRim": true,
