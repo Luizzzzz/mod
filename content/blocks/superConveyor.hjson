@@ -3,6 +3,7 @@
   "type": "ArmoredConveyor",
   "health": 200,
   "speed": 12,
+  "displayspeed":12,
   "itemCapacity": 10,
   "requirements": [
     "copper/2"
