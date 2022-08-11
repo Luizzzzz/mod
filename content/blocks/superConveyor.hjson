@@ -2,8 +2,7 @@
   "name": "[#999900]super conveyor [#ff0000]",
   "type": "ArmoredConveyor",
   "health": 200,
-  "speed": 0.1,
-  "displayedSpeed": 16,
+  "speed": 12,
   itemCapacity: 10,
   "requirements": [
     "copper/2"
