@@ -1,0 +1,16 @@
+{
+  "name": "[#999900]super Duct [#ff0000]",
+  "type": "Duct",
+  "health": 200,
+  "speed": 1,
+  "displayedSpeed":1,
+  "armored":false, 
+  "itemCapacity": 1,
+  "requirements": [
+    "beryllium/1"
+  ],
+  "category": "distribution",
+  "alwaysUnlocked": true
+}
+
+  

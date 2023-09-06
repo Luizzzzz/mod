@@ -1,0 +1,19 @@
+{
+  "name": "[#999900]Super Plasma [#ff0000]bore",
+  "type": "BeamDrill",
+  "size": 2, // 大小
+  "range" : 7,
+  "fogRadius" : 8, 
+  "health": 2600, // 
+  "drillTime": 60,
+  "tier": 6, // 层数
+  "itemCapacity": 100, // 物品容量  
+  "floating": true,
+  "category": "production",
+  "requirements": [
+    "beryllium/10"
+  ],
+  "alwaysUnlocked": true
+}
+
+    

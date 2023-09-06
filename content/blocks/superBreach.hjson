@@ -1,0 +1,63 @@
+{
+	"type": "PowerTurret",
+	"name": "[#999900]超级 [#ff0000]电磁炮", 
+	"targetAir": true,
+	"targetGround": true,
+    "health": 5000,
+	"size": 2, 
+	"reload": 5,
+    "rotateSpeed": 60,
+    "range": 360, 
+    "shootSound": "laser",
+    "heatColor": "5782c2",
+    "inaccuracy": 3,
+        "drawer": {
+            "type": "DrawTurret",
+            "parts": [
+                {
+                "type": "RegionPart", 
+                "mirror": true,
+                "progress": "warmup",
+                "moveX": 1,
+                "under": true,
+                "moveY": 2,
+                "moves": [
+                    {
+                        "type": "PartMove",
+                        "progress": "recoil",
+                        "y": -1,
+                    }
+                ]
+                }
+            ]
+    },
+    "consumes": {
+       "power": 1,
+    },
+    "shoot": {
+        "firstShotDelay": 30,
+        "type": "ShootBarrel",
+        "barrels": [
+            0, -3, 0,
+            8, -4, 0,
+            -8, -4, 0
+        ],
+        "barrelOffset": 1,
+        "shots": 3,
+        "shotDelay": 4.5,
+    },
+    "shootType": {
+        "type": "LaserBulletType",
+        "length": 210,
+        "width": 20,
+        "damage": 55,
+        "chargeEffect": "lightningCharge",
+        "colors": ["7382f040", "7382f0", "ffffff"],
+    },
+	"requirements": [
+	 	{ "item": "beryllium", "amount": 100}, 
+		{"item": "graphite", "amount": 100}
+	],
+	"category": "turret",
+	"alwaysUnlocked": true
+}      
