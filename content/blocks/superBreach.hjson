@@ -35,7 +35,7 @@
        "power": 1,
     },
     "shoot": {
-        "firstShotDelay": 30,
+        "firstShotDelay": 10,
         "type": "ShootBarrel",
         "barrels": [
             0, -3, 0,
@@ -48,9 +48,9 @@
     },
     "shootType": {
         "type": "LaserBulletType",
-        "length": 210,
+        "length": 360,
         "width": 20,
-        "damage": 55,
+        "damage": 200,
         "chargeEffect": "lightningCharge",
         "colors": ["7382f040", "7382f0", "ffffff"],
     },
