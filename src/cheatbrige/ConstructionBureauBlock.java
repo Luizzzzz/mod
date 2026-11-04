@@ -11,7 +11,6 @@ import mindustry.content.UnitTypes;
 import mindustry.entities.units.BuildPlan;
 import mindustry.game.Teams;
 import mindustry.gen.Building;
-import mindustry.gen.Groups;
 import mindustry.gen.Unit;
 import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
@@ -173,7 +172,7 @@ public class ConstructionBureauBlock extends Block{
         private Unit findUnit(int id){
             if(id < 0) return null;
             Unit[] result = {null};
-            Groups.unit.each(unit -> {
+            team.data().units.each(unit -> {
                 if(unit.id() == id){
                     result[0] = unit;
                 }
@@ -207,7 +206,7 @@ public class ConstructionBureauBlock extends Block{
             BuildPlan[] best = {null};
             float[] bestDistance = {Float.MAX_VALUE};
 
-            Groups.unit.each(worker -> {
+            team.data().units.each(worker -> {
                 if(worker.team != team || !worker.isValid() || worker == requester.unit
                     || worker.controller() instanceof BureauDroneAI){
                     return;
@@ -240,7 +239,7 @@ public class ConstructionBureauBlock extends Block{
 
         private boolean isPlanAssigned(BuildPlan plan, BureauDroneAI requester){
             boolean[] assigned = {false};
-            Groups.unit.each(worker -> {
+            team.data().units.each(worker -> {
                 if(worker == requester.unit || !(worker.controller() instanceof BureauDroneAI other)
                     || other.plan == null){
                     return;
@@ -270,7 +269,7 @@ public class ConstructionBureauBlock extends Block{
             Object[] best = {null};
             float[] bestHealth = {Float.MAX_VALUE};
 
-            Groups.build.each(building -> {
+            team.data().buildings.each(building -> {
                 if(building.team != team || !building.isValid()
                     || building.health >= building.maxHealth
                     || !validRepairTarget(building.x, building.y)
@@ -285,7 +284,7 @@ public class ConstructionBureauBlock extends Block{
                 }
             });
 
-            Groups.unit.each(unit -> {
+            team.data().units.each(unit -> {
                 if(unit.team != team || !unit.isValid() || !unit.damaged()
                     || !validRepairTarget(unit.x, unit.y)
                     || isRepairAssigned(unit, requester)){
@@ -304,7 +303,7 @@ public class ConstructionBureauBlock extends Block{
 
         private boolean isRepairAssigned(Object target, BureauDroneAI requester){
             boolean[] assigned = {false};
-            Groups.unit.each(worker -> {
+            team.data().units.each(worker -> {
                 if(worker == requester.unit || !(worker.controller() instanceof BureauDroneAI other)){
                     return;
                 }
