@@ -4,6 +4,13 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing version tag to build and publish
+        required: true
+        default: v1.0.2
+        type: string
 
 permissions:
   contents: write
@@ -11,8 +18,12 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.release_tag || github.ref }}
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -23,4 +34,4 @@ jobs:
       - run: gradle build --no-daemon
       - env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" build/libs/CheatBridge-*.jar --title "Cheat Bridge [v161]" --generate-notes
+        run: gh release create "$RELEASE_TAG" build/libs/CheatBridge-*.jar --verify-tag --title "Cheat Bridge [v161]" --generate-notes
