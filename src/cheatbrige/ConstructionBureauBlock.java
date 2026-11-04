@@ -38,10 +38,8 @@ public class ConstructionBureauBlock extends Block{
         health = 3000;
         consumePower(5f);
         requirements(Category.units, ItemStack.with(
-            Items.copper, 300,
-            Items.lead, 200,
-            Items.graphite, 150,
-            Items.silicon, 100
+            Items.graphite, 300,
+            Items.silicon, 200
         ));
         alwaysUnlocked = true;
         buildType = () -> new BureauBuild();
