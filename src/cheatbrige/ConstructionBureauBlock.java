@@ -156,12 +156,17 @@ public class ConstructionBureauBlock extends Block{
                 if(drone != null && drone.unit.isValid() && !drone.unit.dead()) continue;
 
                 Unit unit = findUnit(savedDroneIds[i]);
-                if(unit == null || !unit.isValid() || unit.dead() || unit.team != team || unit.type != UnitTypes.mono){
+                if(unit != null && unit.isValid() && unit.type == UnitTypes.mono){
+                    unit.remove();
+                    unit = null;
+                }
+
+                if(unit == null || !unit.isValid() || unit.dead() || unit.team != team || unit.type != CheatBridgeMod.bureauDroneType){
                     droneSpawnTimer += Time.delta;
                     if(droneSpawnTimer < 6f) return;
                     droneSpawnTimer = 0f;
 
-                    unit = UnitTypes.mono.create(team);
+                    unit = CheatBridgeMod.bureauDroneType.create(team);
                     float angle = i * 360f / droneCount;
                     float cos = Mathf.cosDeg(angle);
                     float sin = Mathf.sinDeg(angle);

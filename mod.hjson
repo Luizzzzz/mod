@@ -3,7 +3,7 @@
 	"displayName": "Cheat Bridge",
 	"author": "Luiz",
 	"description": "强化生产、运输、供电、防御与基地辅助方块。",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"minGameVersion": "161",
 	"main": "cheatbrige.CheatBridgeMod",
 	"repo": "Luizzzzz/mod",
