@@ -4,6 +4,6 @@
 	"author": "Luiz",
 	"description": "强化生产、运输、供电与防御方块。",
 	"version": "1.0.1",
-	"minGameVersion": "160",
+	"minGameVersion": "161",
 	"dependencies": []
 }
