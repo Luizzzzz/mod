@@ -13,7 +13,9 @@ bureauBlock.configurable = false;
 bureauBlock.hasPower = true;
 bureauBlock.health = 3000;
 bureauBlock.consumePower(5);
-bureauBlock.setupRequirements(Category.units, ItemStack.with(Items.graphite, 300, Items.silicon, 200));
+bureauBlock.category = Category.units;
+bureauBlock.requirements = ItemStack.with(Items.graphite, 300, Items.silicon, 200);
+java.util.Arrays.sort(bureauBlock.requirements);
 bureauBlock.buildVisibility = BuildVisibility.shown;
 bureauBlock.alwaysUnlocked = true;
 

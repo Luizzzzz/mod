@@ -1,7 +1,9 @@
 function createBlock(type, name, category, requirements, properties){
     var block = extend(type, name, properties || {});
     block.buildVisibility = BuildVisibility.shown;
-    block.setupRequirements(category, requirements);
+    block.category = category;
+    block.requirements = requirements;
+    java.util.Arrays.sort(block.requirements);
     block.alwaysUnlocked = true;
     return block;
 }
