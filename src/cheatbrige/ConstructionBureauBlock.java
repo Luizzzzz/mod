@@ -49,6 +49,7 @@ public class ConstructionBureauBlock extends Block{
         private final int[] savedDroneIds = new int[droneCount];
         private CoreBuild linkedCore;
         private float scanTimer;
+        private float droneSpawnTimer;
 
         public BureauBuild(){
             for(int i = 0; i < savedDroneIds.length; i++){
@@ -156,8 +157,14 @@ public class ConstructionBureauBlock extends Block{
 
                 Unit unit = findUnit(savedDroneIds[i]);
                 if(unit == null || !unit.isValid() || unit.dead() || unit.team != team || unit.type != UnitTypes.mono){
+                    droneSpawnTimer += Time.delta;
+                    if(droneSpawnTimer < 6f) return;
+                    droneSpawnTimer = 0f;
+
                     unit = UnitTypes.mono.create(team);
-                    unit.set(x + Mathf.range(12f), y + Mathf.range(12f));
+                    float angle = i * 360f / droneCount;
+                    float radius = size * Vars.tilesize / 2f + unit.type.hitSize;
+                    unit.set(x + Mathf.cosDeg(angle) * radius, y + Mathf.sinDeg(angle) * radius);
                     unit.add();
                 }
 

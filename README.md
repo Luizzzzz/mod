@@ -21,6 +21,6 @@ v9 Dev 的物品炮塔使用 `itemCapacity` 表示可存放的弹药物品数，
 
 ## 安装与验证
 
-使用 JDK 17 和 Gradle 执行 `gradle build`。生成的 `build/libs/CheatBridge-1.0.4.jar` 可直接放入 Mindustry 的 `mods` 目录；Android 版需安装包含该 JAR（内含 `classes.dex`）的 GitHub Release。推送 `v*` 标签会自动构建并发布以 Build 161 为目标的 Release。要在游戏模组浏览器中列出模组，GitHub 仓库还需添加 `mindustry-mod` topic。重新启动游戏后检查模组加载日志，并确认既有方块内容以及建设局无人机的维修、建造、拆除和战争迷雾限制。
+使用 JDK 17 和 Gradle 执行 `gradle build`。生成的 `build/libs/CheatBridge-1.0.5.jar` 可直接放入 Mindustry 的 `mods` 目录；Android 版需安装包含该 JAR（内含 `classes.dex`）的 GitHub Release。推送 `v*` 标签会自动构建并发布以 Build 161 为目标的 Release。要在游戏模组浏览器中列出模组，GitHub 仓库还需添加 `mindustry-mod` topic。重新启动游戏后检查模组加载日志，并确认既有方块内容以及建设局无人机的维修、建造、拆除和战争迷雾限制。
 
 模组 HJSON 可使用 VS Code 的 Mindustry HJSON 扩展检查字段名称和格式；精灵图应为 32-bit RGBA PNG，尺寸需与对应方块大小匹配。
