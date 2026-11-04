@@ -165,7 +165,7 @@ public class ConstructionBureauBlock extends Block{
                     float angle = i * 360f / droneCount;
                     float cos = Mathf.cosDeg(angle);
                     float sin = Mathf.sinDeg(angle);
-                    float extent = Mathf.max(Mathf.abs(cos), Mathf.abs(sin));
+                    float extent = Math.max(Math.abs(cos), Math.abs(sin));
                     float radius = (size * Vars.tilesize / 2f + unit.type.hitSize + 1f) / extent;
                     unit.set(x + cos * radius, y + sin * radius);
                     unit.add();
