@@ -9,7 +9,7 @@ on:
       release_tag:
         description: Existing version tag to build and publish
         required: true
-        default: v1.0.11
+        default: v1.0.12
         type: string
 
 permissions:

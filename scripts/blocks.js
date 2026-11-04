@@ -109,7 +109,7 @@ superTurret.shoot.spread = 5;
 
 function createSuperTurretBullet(knockback){
     var bullet = new BasicBulletType(6, 200);
-    bullet.ammoMultiplier = 8;
+    bullet.ammoUsed = 0.125;
     bullet.knockback = knockback || 0;
     bullet.lifetime = 250;
     bullet.scaleLife = true;
