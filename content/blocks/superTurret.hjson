@@ -1,21 +1,24 @@
 {
   "type": "ItemTurret",
   "name": "[#999900]super turret[#ff0000]",
-  "description": "A shotgun turret. More damage the closer the enemies are to it's barrel.",
+  "description": "Fires two high-damage rounds in a spread.",
   "health": 2800,
   "maxAmmo": 50,
-  "reloadTime": 60,
+  "reload": 60,
   "range": 250,
   "inaccuracy": 5,
-  "speed": 5,
-  "shots": 2,
   "size": 1,
   "targetAir": true,
   "targetGround": true,
-  "rotatespeed": 2,
-  "recoilAmount": 1,
+  "rotateSpeed": 2,
+  "recoil": 1,
   "shootSound": "shoot",
   "buildCostMultiplier": 0,
+  "shoot": {
+    "type": "ShootSpread",
+    "shots": 2,
+    "spread": 5
+  },
   "ammoTypes": {
     "sand": {
       "damage": 200, 

@@ -8,7 +8,7 @@
 	"reload": 5,
     "rotateSpeed": 60,
     "range": 360, 
-    "shootSound": "laser",
+    "shootSound": "shootLancer",
     "heatColor": "5782c2",
     "inaccuracy": 3,
         "drawer": {

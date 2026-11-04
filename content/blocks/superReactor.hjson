@@ -7,11 +7,9 @@
   "itemDuration": 10,
   "powerProduction": 300,
   "consumes": {
-    "items": {
-      "items": [
+    "items":  [
         "copper/9"
-      ]
-    }
+  ]
   },
   "requirements": [
     "copper/300"

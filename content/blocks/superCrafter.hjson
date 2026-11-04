@@ -35,14 +35,12 @@
   ], 
   "craftTime": 20,
   "consumes": {
-    "items": {
-      "items": [
-        {
-          "item": "copper",
-          "amount": 5
-        }
-      ]
-    }
+    "items": [
+      {
+        "item": "copper",
+        "amount": 5
+      }
+    ]
   },
   "alwaysUnlocked": true,
   "category": "crafting"
