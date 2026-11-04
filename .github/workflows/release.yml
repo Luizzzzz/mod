@@ -9,7 +9,7 @@ on:
       release_tag:
         description: Existing version tag to build and publish
         required: true
-        default: v1.0.8
+        default: v1.0.9
         type: string
 
 permissions:
@@ -24,14 +24,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.release_tag || github.ref }}
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "17"
-      - uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: "8.10.2"
-      - run: gradle build --no-daemon
+      - name: Package script mod
+        run: |
+          mkdir -p build/release
+          zip -r build/release/CheatBridge.zip mod.hjson scripts bundles sprites
       - env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$RELEASE_TAG" build/libs/CheatBridge-*.jar --verify-tag --title "Cheat Bridge [v161]" --generate-notes
+        run: gh release create "$RELEASE_TAG" build/release/CheatBridge.zip --verify-tag --title "Cheat Bridge [v161]" --generate-notes

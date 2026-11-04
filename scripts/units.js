@@ -1,0 +1,23 @@
+var constructionBureauDrone = extend(UnitType, "construction-bureau-drone", {
+    flying: true,
+    lowAltitude: true,
+    drag: 0.05,
+    speed: 2.6,
+    rotateSpeed: 15,
+    accel: 0.1,
+    health: 400,
+    buildSpeed: 0.4,
+    engineOffset: 6.5,
+    hitSize: 9,
+    mineTier: 2,
+    mineSpeed: 3.5,
+    useUnitCap: false,
+    targetable: false,
+    killable: false,
+    createWreck: false,
+    deathExplosionEffect: Fx.none,
+    deathShake: 0,
+    hidden: true,
+    playerControllable: false,
+    logicControllable: false
+});

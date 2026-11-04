@@ -5,7 +5,7 @@
 ## 兼容性
 
 - 目标版本：Mindustry v9 Dev，Build 161 及更新版本；不兼容 Build 160。
-- 方块数据使用 HJSON；建设局使用 Java 内容类与无人机 AI，构建会同时打包 Android 所需的 DEX。
+- 内容定义与建设局 AI 使用 Mindustry Rhino JavaScript 脚本；模组不再包含 Java/DEX。
 - 模组内部 ID `cheatBrige` 暂时保留，以避免影响已有安装和存档中的内容引用。
 
 ## 内容
@@ -21,6 +21,6 @@ v9 Dev 的物品炮塔使用 `itemCapacity` 表示可存放的弹药物品数，
 
 ## 安装与验证
 
-使用 JDK 17 和 Gradle 执行 `gradle build`。生成的 `build/libs/CheatBridge-1.0.8.jar` 可直接放入 Mindustry 的 `mods` 目录；Android 版需安装包含该 JAR（内含 `classes.dex`）的 GitHub Release。推送 `v*` 标签会自动构建并发布以 Build 161 为目标的 Release。要在游戏模组浏览器中列出模组，GitHub 仓库还需添加 `mindustry-mod` topic。重新启动游戏后检查模组加载日志，并确认既有方块内容以及建设局无人机的维修、建造、拆除和战争迷雾限制。
+模组不需要 Java、Gradle 或 DEX 构建。将仓库内容打包成 ZIP（`mod.hjson` 放在压缩包根目录），即可导入 Mindustry；推送 `v*` 标签会自动打包并发布 ZIP。要在游戏模组浏览器中列出模组，GitHub 仓库还需添加 `mindustry-mod` topic。JS 内容和建设局脚本使用 Rhino API；在目标桌面版及 Android 版本中验证模组加载、方块内容、无人机数量、存档恢复、维修与施工行为。
 
-模组 HJSON 可使用 VS Code 的 Mindustry HJSON 扩展检查字段名称和格式；精灵图应为 32-bit RGBA PNG，尺寸需与对应方块大小匹配。
+脚本使用 Rhino JavaScript 语法，并通过 Mindustry 的 `extend` API 注册内容；精灵图应为 32-bit RGBA PNG，尺寸需与对应方块大小匹配。
