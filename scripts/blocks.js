@@ -1,7 +1,7 @@
 function createBlock(type, name, category, requirements, properties){
     var block = extend(type, name, properties || {});
     block.buildVisibility = BuildVisibility.shown;
-    block.requirements(category, requirements);
+    block.setupRequirements(category, requirements);
     block.alwaysUnlocked = true;
     return block;
 }
