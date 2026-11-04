@@ -4,7 +4,7 @@
 
 ## 兼容性
 
-- 目标版本：Mindustry v8，Build 160 及更新版本。
+- 目标版本：Mindustry v9 Dev，Build 161 及更新版本；不兼容 Build 160。
 - 当前内容为 HJSON 数据模组，不包含 Java 或 JavaScript 代码。
 - 模组内部 ID `cheatBrige` 暂时保留，以避免影响已有安装和存档中的内容引用。
 
@@ -15,6 +15,8 @@
 - 电力：消耗物品发电的反应堆与热能涡轮冷凝器。
 - 防御：强化物品炮塔与电磁炮。
 - 简体中文名称和介绍：`bundles/bundle_zh_CN.properties`。
+
+v9 Dev 的物品炮塔使用 `itemCapacity` 表示可存放的弹药物品数，使用子弹的 `ammoUsed` 表示每次射击消耗量；本模组已按该机制调整超级炮塔。
 
 ## 安装与验证
 

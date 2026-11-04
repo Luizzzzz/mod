@@ -3,7 +3,7 @@
   "name": "[#999900]super turret[#ff0000]",
   "description": "Fires two high-damage rounds in a spread.",
   "health": 2800,
-  "maxAmmo": 50,
+  "itemCapacity": 6,
   "reload": 60,
   "range": 250,
   "inaccuracy": 5,
@@ -23,7 +23,7 @@
     "sand": {
       "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8,
+      "ammoUsed": 0.125,
       "impact": true,
       "knockback": 1,
       "scaleLife": true,
@@ -32,21 +32,21 @@
     "copper": {
       "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8, 
+      "ammoUsed": 0.125,
       "scaleLife": true,
       "lifetime": 250
     },
     "lead": {
       "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8, 
+      "ammoUsed": 0.125,
       "scaleLife": true,
       "lifetime": 250
     },
     "titanium": {
       "damage": 200, 
       "speed": 6,
-      "ammoMultiplier": 8, 
+      "ammoUsed": 0.125,
       "scaleLife": true,
       "lifetime": 250
     }
