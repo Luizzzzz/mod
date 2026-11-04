@@ -1,5 +1,4 @@
 {
-  "name": "[#999900]Super Plasma [#ff0000]bore",
   "type": "BeamDrill",
   "size": 2, // 大小
   "range" : 7,

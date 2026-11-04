@@ -1,7 +1,5 @@
 {
   "type": "ItemTurret",
-  "name": "[#999900]super turret[#ff0000]",
-  "description": "Fires two high-damage rounds in a spread.",
   "health": 2800,
   "itemCapacity": 6,
   "reload": 60,

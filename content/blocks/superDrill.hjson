@@ -1,5 +1,4 @@
 {
-  "name": "[#999900]super drill [#ff0000]",
   "type": "Drill",
   "size": 2, // 大小
   "health": 2600, // 

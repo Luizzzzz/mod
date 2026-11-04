@@ -1,5 +1,4 @@
 {
-  "name": "[#999900]super conveyor [#ff0000]",
   "type": "Conveyor",
   "noSideBlend": true,
   "health": 200,

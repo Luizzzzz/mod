@@ -1,6 +1,5 @@
 {
   "type": "ConsumeGenerator",
-  "name": "[#999900]super reactor[#ff0000]", 
   "size": 2, 
   "hasItems": true,
   "itemCapacity": 20,

@@ -1,6 +1,5 @@
 {
 	"type": "PowerTurret",
-	"name": "[#999900]超级 [#ff0000]电磁炮", 
 	"targetAir": true,
 	"targetGround": true,
     "health": 5000,

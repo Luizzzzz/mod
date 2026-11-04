@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+}
+
+group = 'cheatbrige'
+version = '1.0.2'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    maven { url = 'https://maven.aliyun.com/repository/public' }
+    maven { url = 'https://maven.aliyun.com/repository/google' }
+    mavenCentral()
+    google()
+    maven { url = 'https://www.jitpack.io' }
+}
+
+configurations {
+    d8
+    androidLib
+}
+
+dependencies {
+    compileOnly 'com.github.Anuken.Mindustry:core:b873c01ed559a8803c2dad5c5c79d7ad750d5b95'
+    d8 'com.android.tools:r8:8.3.37'
+    androidLib 'com.google.android:android:4.1.1.4'
+}
+
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+    }
+}
+
+processResources {
+    from 'mod.hjson'
+    from('bundles') { into 'bundles' }
+    from('sprites') { into 'sprites' }
+    from('content') { into 'content' }
+}
+
+tasks.register('modClassesJar', Jar) {
+    dependsOn classes
+    archiveFileName = 'mod-classes.jar'
+    destinationDirectory = file("$buildDir/intermediates")
+    from sourceSets.main.output.classesDirs
+}
+
+tasks.register('dexMod', JavaExec) {
+    dependsOn tasks.named('modClassesJar')
+    classpath = configurations.d8
+    mainClass = 'com.android.tools.r8.D8'
+    doFirst {
+        file("$buildDir/intermediates/dex").mkdirs()
+    }
+    args '--min-api', '23'
+    configurations.compileClasspath.files.each { classpathEntry ->
+        args '--classpath', classpathEntry.absolutePath
+    }
+    configurations.androidLib.files.each { libraryEntry ->
+        args '--lib', libraryEntry.absolutePath
+    }
+    args '--output', file("$buildDir/intermediates/dex"), file("$buildDir/intermediates/mod-classes.jar")
+}
+
+jar {
+    archiveBaseName = 'CheatBridge'
+    dependsOn tasks.named('dexMod')
+    from("$buildDir/intermediates/dex") {
+        include 'classes.dex'
+    }
+}

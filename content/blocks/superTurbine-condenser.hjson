@@ -1,6 +1,5 @@
 {
   "type": "ThermalGenerator",
-  "name": "[#999900]Super Turbine condenser[#ff0000]", 
   "size": 3,    
   "requirements": [
     "beryllium/60"
