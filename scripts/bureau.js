@@ -37,7 +37,7 @@ function findUnitById(building, id){
     if(id < 0) return null;
     var found = null;
     building.team.data().units.each(function(unit){
-        if(unit.id() == id) found = unit;
+        if(unit.id == id) found = unit;
     });
     return found;
 }
@@ -263,7 +263,7 @@ bureauBlock.buildType = prov(function(){
             this.super$write(write);
             for(var i = 0; i < droneCount; i++){
                 var drone = this.drones[i];
-                write.i(drone == null || !drone.unit.isValid() ? this.droneIds[i] : drone.unit.id());
+                write.i(drone == null || !drone.unit.isValid() ? this.droneIds[i] : drone.unit.id);
             }
         },
 
@@ -316,7 +316,7 @@ bureauBlock.buildType = prov(function(){
 
                 drone = makeDroneController(this, unit);
                 this.drones[i] = drone;
-                this.droneIds[i] = unit.id();
+                this.droneIds[i] = unit.id;
                 unit.plans().clear();
                 unit.controller(drone);
             }
