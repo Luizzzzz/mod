@@ -42,6 +42,27 @@ function findUnitById(building, id){
     return found;
 }
 
+function droneFlag(building, index){
+    return building.tile.pos() * droneCount + index + 1;
+}
+
+function findDroneByFlag(building, droneType, flag){
+    var found = null;
+    var duplicates = [];
+    building.team.data().units.each(function(unit){
+        if(unit.type != droneType || unit.flag != flag || !unit.isValid()) return;
+        if(found == null){
+            found = unit;
+        }else{
+            duplicates.push(unit);
+        }
+    });
+    for(var i = 0; i < duplicates.length; i++){
+        duplicates[i].remove();
+    }
+    return found;
+}
+
 function inWorkArea(building, x, y){
     return building.linkedCore != null
         && Mathf.dst2(building.linkedCore.x, building.linkedCore.y, x, y) <= workRadius * workRadius
@@ -290,9 +311,14 @@ bureauBlock.buildType = prov(function(){
 
             for(var i = 0; i < droneCount; i++){
                 var drone = this.drones[i];
-                if(drone != null && drone.unit.isValid() && !drone.unit.dead()) continue;
+                var flag = droneFlag(this, i);
+                if(drone != null && drone.unit.isValid() && !drone.unit.dead()){
+                    drone.unit.flag = flag;
+                    continue;
+                }
 
-                var unit = findUnitById(this, this.droneIds[i]);
+                var unit = findDroneByFlag(this, droneType, flag);
+                if(unit == null) unit = findUnitById(this, this.droneIds[i]);
                 if(unit != null && unit.isValid() && unit.type == UnitTypes.mono){
                     unit.remove();
                     unit = null;
@@ -314,6 +340,7 @@ bureauBlock.buildType = prov(function(){
                     unit.add();
                 }
 
+                unit.flag = flag;
                 drone = makeDroneController(this, unit);
                 this.drones[i] = drone;
                 this.droneIds[i] = unit.id;
