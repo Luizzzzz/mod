@@ -1,0 +1,13 @@
+{
+  "name": "[#999900]super Cliff crusher [#ff0000]",
+  "type": "WallCrafter",
+  "size": 2, // 大小
+  "health": 2600, // 
+  "drillTime": 5, 
+  "category": "production",
+  "requirements": [
+    "graphite/15",
+    "beryllium/10"
+  ],
+  "alwaysUnlocked": true
+}

@@ -1,0 +1,14 @@
+{
+  "name": "[#999900]super conveyor [#ff0000]",
+  "type": "Conveyor",
+  "noSideBlend": true,
+  "health": 200,
+  "speed": 12,
+  "displayedSpeed":12,
+  "itemCapacity": 10,
+  "requirements": [
+    "copper/2"
+  ],
+  "category": "distribution",
+  "alwaysUnlocked": true
+}

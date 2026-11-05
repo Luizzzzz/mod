@@ -1,0 +1,19 @@
+{
+  "type": "ConsumeGenerator",
+  "name": "[#999900]super reactor[#ff0000]", 
+  "size": 2, 
+  "hasItems": true,
+  "itemCapacity": 20,
+  "itemDuration": 10,
+  "powerProduction": 300,
+  "consumes": {
+    "items":  [
+        "copper/9"
+  ]
+  },
+  "requirements": [
+    "copper/300"
+  ],
+  "category": "power",
+  "alwaysUnlocked": true
+}

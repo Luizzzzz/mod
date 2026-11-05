@@ -1,0 +1,47 @@
+{
+  "name": "[#999900]super crafter [#ff0000]",
+  "type": "GenericCrafter",
+  "size": 2,
+  "hasItems": true,
+  "craftEffect": "smeltsmoke",
+  "updateEffect": "pulverizeRed",
+  "requirements": [
+    {
+      "item": "copper",
+      "amount": 10
+    }
+  ],
+  "outputItems": [
+    {
+      "item": "scrap",
+      "amount": 1
+    },
+    {
+      "item": "lead",
+      "amount": 1
+    },
+    {
+      "item": "titanium",
+      "amount": 1
+    },
+    {
+      "item": "graphite",
+      "amount": 1
+    },
+    {
+      "item": "silicon",
+      "amount": 1
+    }
+  ], 
+  "craftTime": 20,
+  "consumes": {
+    "items": [
+      {
+        "item": "copper",
+        "amount": 5
+      }
+    ]
+  },
+  "alwaysUnlocked": true,
+  "category": "crafting"
+}

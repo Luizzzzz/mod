@@ -1,0 +1,62 @@
+{
+  "type": "ItemTurret",
+  "name": "[#999900]super turret[#ff0000]",
+  "description": "Fires two high-damage rounds in a spread.",
+  "health": 2800,
+  "itemCapacity": 6,
+  "reload": 60,
+  "range": 250,
+  "inaccuracy": 5,
+  "size": 1,
+  "targetAir": true,
+  "targetGround": true,
+  "rotateSpeed": 2,
+  "recoil": 1,
+  "shootSound": "shoot",
+  "buildCostMultiplier": 0,
+  "shoot": {
+    "type": "ShootSpread",
+    "shots": 2,
+    "spread": 5
+  },
+  "ammoTypes": {
+    "sand": {
+      "damage": 200, 
+      "speed": 6,
+      "ammoUsed": 0.125,
+      "impact": true,
+      "knockback": 1,
+      "scaleLife": true,
+      "lifetime": 250
+    },
+    "copper": {
+      "damage": 200, 
+      "speed": 6,
+      "ammoUsed": 0.125,
+      "scaleLife": true,
+      "lifetime": 250
+    },
+    "lead": {
+      "damage": 200, 
+      "speed": 6,
+      "ammoUsed": 0.125,
+      "scaleLife": true,
+      "lifetime": 250
+    },
+    "titanium": {
+      "damage": 200, 
+      "speed": 6,
+      "ammoUsed": 0.125,
+      "scaleLife": true,
+      "lifetime": 250
+    }
+  },
+  "requirements": [
+    {
+      "item": "copper",
+      "amount": 100
+    }
+  ],
+  "category": "turret",
+  "alwaysUnlocked": true
+}
