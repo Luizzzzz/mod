@@ -1,0 +1,14 @@
+{
+  "type": "BurstDrill",
+  "name": "[#999900]super impact drill[#ff0000]",
+  "size": 2,
+  "health": 5200,
+  "drillTime": 60,
+  "tier": 8,
+  "itemCapacity": 100,
+  "requirements": [
+    "beryllium/10"
+  ],
+  "category": "production",
+  "alwaysUnlocked": true
+}
