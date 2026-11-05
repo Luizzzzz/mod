@@ -9,7 +9,7 @@ on:
       release_tag:
         description: Existing version tag to build and publish
         required: true
-        default: v1.0.12
+        default: v1.0.13
         type: string
 
 permissions:
@@ -30,4 +30,20 @@ jobs:
           zip -r build/release/CheatBridge.zip mod.hjson scripts bundles sprites
       - env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$RELEASE_TAG" build/release/CheatBridge.zip --verify-tag --title "Cheat Bridge [v161]" --generate-notes
+        run: |
+          for attempt in 1 2 3 4 5; do
+            if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+              if gh release upload "$RELEASE_TAG" build/release/CheatBridge.zip --clobber; then
+                exit 0
+              fi
+            elif gh release create "$RELEASE_TAG" build/release/CheatBridge.zip --verify-tag --title "Cheat Bridge [v161]" --generate-notes; then
+              exit 0
+            fi
+
+            if [ "$attempt" -lt 5 ]; then
+              sleep $((attempt * 10))
+            fi
+          done
+
+          echo "Failed to publish release $RELEASE_TAG after 5 attempts." >&2
+          exit 1
