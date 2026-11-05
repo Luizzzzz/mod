@@ -9,7 +9,7 @@ on:
       release_tag:
         description: Existing version tag to build and publish
         required: true
-        default: v1.0.14
+        default: v1.0.15
         type: string
 
 permissions:
@@ -36,7 +36,7 @@ jobs:
               if gh release upload "$RELEASE_TAG" build/release/CheatBridge.zip --clobber; then
                 exit 0
               fi
-            elif gh release create "$RELEASE_TAG" build/release/CheatBridge.zip --verify-tag --title "Cheat Bridge [v161]" --generate-notes; then
+            elif gh release create "$RELEASE_TAG" build/release/CheatBridge.zip --verify-tag --title "Cheat Bridge [$RELEASE_TAG]" --generate-notes; then
               exit 0
             fi
 

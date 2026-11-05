@@ -92,7 +92,7 @@ function findBuildPlan(building, requester){
         if(worker.team != building.team || !worker.isValid() || worker == requester) return;
         var controller = worker.controller();
         if(controller != null && controller.bureauBuild == building) return;
-        var plans = worker.plans();
+        var plans = worker.plans;
         for(var i = 0; i < plans.size; i++){
             consider(plans.get(i));
         }
@@ -153,7 +153,7 @@ function clearAssignment(controller){
     controller.plan = null;
     controller.repairBuilding = null;
     controller.repairUnit = null;
-    controller.unit.plans().clear();
+    controller.unit.plans.clear();
 }
 
 function assignPlan(controller, plan){
@@ -317,7 +317,7 @@ bureauBlock.buildType = prov(function(){
                 drone = makeDroneController(this, unit);
                 this.drones[i] = drone;
                 this.droneIds[i] = unit.id;
-                unit.plans().clear();
+                unit.plans.clear();
                 unit.controller(drone);
             }
         },
